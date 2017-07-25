@@ -1,20 +1,15 @@
+<?php
+$links = require 'config/navigation-links.php';
+$objects = json_decode(json_encode($links['links']), FALSE);
+?>
+
 
 <ul>
-
-  <!-- home page-->
-  <?php if ($page == "home") { ?>
-    <li><a class="active" href="index.php">Home</a></li>
-
-  <?php } else { ?>
-    <li><a href="index.php">Home</a></li>
-  <?php } ?>
-
-<!-- about page -->
-<?php if ($page == "about") { ?>
-  <li><a class="active" href="about.php">About</a></li>
-
-<?php } else { ?>
-  <li><a href="about.php">About</a></li>
+  <?php foreach($objects as $link) { ?>
+  <li>
+ <a href= "<?php echo $link->reference; ?>">
+<?php echo $link->text; ?>
+</a>
+  </li>
 <?php } ?>
-
 </ul>

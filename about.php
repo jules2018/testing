@@ -5,7 +5,7 @@
 
 
 
-  <h1>About page</h1>
+  <h1>About </h1>
 
 
 <?php require 'layouts/foot-content.php';?>
